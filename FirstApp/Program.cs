@@ -6,8 +6,7 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            string myName;
-            myName = "Anna";
+            const string myName = "Anna";
 
             Console.WriteLine(myName);
 
