@@ -10,9 +10,9 @@ namespace FirstApp
 
             Console.WriteLine(myName);
 
-            Console.WriteLine("Привет, мир!");
-            Console.WriteLine("Мне 34 года");
-            Console.WriteLine("My name is Anna");
+            Console.WriteLine("\t Привет, мир!");
+            Console.WriteLine("\t Мне 34 года");
+            Console.WriteLine("\t My name is \n Anna");
 
             Console.ReadKey();
         }
