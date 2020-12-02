@@ -36,7 +36,9 @@ namespace FirstApp
             Console.WriteLine("LongMin {0}", long.MinValue);
             Console.WriteLine("LongMax {0}", long.MaxValue);
 
-
+            Console.WriteLine();
+            Console.WriteLine("\t Привет, \n мир!");
+            Console.WriteLine($"Мой возраст {MyAge}");
 
             Console.ReadKey();
         }
