@@ -2,6 +2,16 @@
 
 namespace FirstApp
 {
+    enum DaysOfWeek : byte
+    {
+        Monday = 1,
+        Tyesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saterday,
+        Sunday
+    }
     class Program
     {
         static void Main(string[] args)
@@ -18,6 +28,8 @@ namespace FirstApp
 
             Console.WriteLine("LongMin {0}", long.MinValue);
             Console.WriteLine("LongMax {0}", long.MaxValue);
+
+
 
             Console.ReadKey();
         }
