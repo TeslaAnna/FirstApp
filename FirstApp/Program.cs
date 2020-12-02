@@ -16,6 +16,9 @@ namespace FirstApp
             Console.WriteLine("Do I have a pet? " + HaveIApet);
             Console.WriteLine("My shoe size is " + MyShoeSize);
 
+            Console.WriteLine("LongMin {0}", long.MinValue);
+            Console.WriteLine("LongMax {0}", long.MaxValue);
+
             Console.ReadKey();
         }
     }
