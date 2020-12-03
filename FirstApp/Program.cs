@@ -14,7 +14,7 @@ namespace FirstApp
 
             Console.WriteLine("Your name is {0} and age is {1}", Name, Age);
 
-            Console.WriteLine("Enter your birthdate: ");
+            Console.Write("Enter your birthdate: ");
             var Birthdate = Console.ReadLine();
 
             Console.WriteLine("Your birthday is {0}", Birthdate);
