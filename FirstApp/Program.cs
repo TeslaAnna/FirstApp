@@ -25,11 +25,18 @@ namespace FirstApp
                    Console.WriteLine("Ваш любимый цвет зелёный!");
                     break;
 
-                default:
-                   Console.BackgroundColor = ConsoleColor.Cyan;
-                   Console.ForegroundColor = ConsoleColor.Black;
+                case "cyan":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
 
-                   Console.WriteLine("Ваш любимый цвет бирюзовый!");
+                    Console.WriteLine("Ваш любимый цвет бирюзовый");
+                    break;
+
+                default:
+                   Console.BackgroundColor = ConsoleColor.Yellow;
+                   Console.ForegroundColor = ConsoleColor.Red;
+
+                   Console.WriteLine("Ваш любимый цвет жёлтый!");
                     break;
             }
 
