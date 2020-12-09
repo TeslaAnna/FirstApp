@@ -6,18 +6,18 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter your name: ");
-            string Name = Console.ReadLine();
+            int currentDayInYear = 293;
+            bool isLeapYear = false;
 
-            Console.Write("Enter your age: ");
-            var Age = Convert.ToInt32(Console.ReadLine());
+            bool isWinter =
+                !isLeapYear & (currentDayInYear >= 335 | currentDayInYear <= 59)
+                |
+                isLeapYear & (currentDayInYear >= 336 | currentDayInYear <= 60);
 
-            Console.WriteLine("Your name is {0} and age is {1}", Name, Age);
+            Console.WriteLine("Текущее время года - зима: {0}", isWinter);
 
-            Console.Write("Enter your birthdate: ");
-            var Birthdate = Console.ReadLine();
 
-            Console.WriteLine("Your birthday is {0}", Birthdate);
+            Console.ReadKey();
 
 
 
