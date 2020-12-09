@@ -6,15 +6,33 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            int currentDayInYear = 293;
-            bool isLeapYear = false;
+            Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
+            var color = Console.ReadLine();
 
-            bool isWinter =
-                !isLeapYear & (currentDayInYear >= 335 | currentDayInYear <= 59)
-                |
-                isLeapYear & (currentDayInYear >= 336 | currentDayInYear <= 60);
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Текущее время года - зима: {0}", isWinter);
+                Console.WriteLine("Ваш любимы цвет красный!");
+            }
+
+            else if (color == "green") 
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Ваш любимый цвет зелёный!");
+            }
+
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Ваш любимый цвет бирюзовый!");
+            }
+
 
 
             Console.ReadKey();
