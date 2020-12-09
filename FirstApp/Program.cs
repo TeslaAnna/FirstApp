@@ -9,28 +9,28 @@ namespace FirstApp
             Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
             var color = Console.ReadLine();
 
-            if (color == "red")
+            switch(color)
             {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
+                case "red":
+                   Console.BackgroundColor = ConsoleColor.Red;
+                   Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимы цвет красный!");
-            }
+                   Console.WriteLine("Ваш любимы цвет красный!");
+                    break;
 
-            else if (color == "green") 
-            {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
+                case "green":
+                   Console.BackgroundColor = ConsoleColor.Green;
+                   Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет зелёный!");
-            }
+                   Console.WriteLine("Ваш любимый цвет зелёный!");
+                    break;
 
-            else
-            {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;
+                default:
+                   Console.BackgroundColor = ConsoleColor.Cyan;
+                   Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет бирюзовый!");
+                   Console.WriteLine("Ваш любимый цвет бирюзовый!");
+                    break;
             }
 
 
