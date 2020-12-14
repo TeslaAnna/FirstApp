@@ -6,40 +6,42 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите свой любимый цвет на английском с маленькой буквы");
-            var color = Console.ReadLine();
-
-            switch(color)
+            for (int i = 1; i < 5; i++)
             {
-                case "red":
-                   Console.BackgroundColor = ConsoleColor.Red;
-                   Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Iteration {0}", i);
 
-                   Console.WriteLine("Ваш любимы цвет красный!");
-                    break;
 
-                case "green":
-                   Console.BackgroundColor = ConsoleColor.Green;
-                   Console.ForegroundColor = ConsoleColor.Black;
+                switch (Console.ReadLine())
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-                   Console.WriteLine("Ваш любимый цвет зелёный!");
-                    break;
+                        Console.WriteLine("Ваш любимы цвет красный!");
+                        break;
 
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine("Ваш любимый цвет бирюзовый");
-                    break;
+                        Console.WriteLine("Ваш любимый цвет зелёный!");
+                        break;
 
-                default:
-                   Console.BackgroundColor = ConsoleColor.Yellow;
-                   Console.ForegroundColor = ConsoleColor.Red;
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-                   Console.WriteLine("Ваш любимый цвет жёлтый!");
-                    break;
+                        Console.WriteLine("Ваш любимый цвет бирюзовый");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Ваш любимый цвет жёлтый!");
+                        break;
+                }
             }
-
 
 
             Console.ReadKey();
