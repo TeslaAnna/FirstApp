@@ -7,126 +7,27 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            Console.WriteLine("Цикл do...while");
-            int t = 0;
+            int sum = 0;
 
-            do
+            while (true)
             {
-                Console.WriteLine(t);
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                switch (Console.ReadLine())
+                Console.WriteLine("Введите число");
+                var number = Convert.ToInt32(Console.ReadLine());
+
+                if (number < 0)
                 {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимы цвет красный!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет зелёный!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет бирюзовый");
-                        break;
-
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        Console.WriteLine("Ваш любимый цвет жёлтый!");
-                        break;
+                    continue;
                 }
-                t++;
-            } while(t < 3);
-
-
-
-            Console.WriteLine("Цикл for");
-
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine(i);
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                switch (Console.ReadLine())
+                else if (number == 0)
                 {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимы цвет красный!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет зелёный!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет бирюзовый");
-                        break;
-
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        Console.WriteLine("Ваш любимый цвет жёлтый!");
-                        break;
+                    break;
                 }
+
+                // number > 0
+                sum += number;
             }
 
-            Console.WriteLine("Цикл while");
-            int k = 0;
-
-            while (k < 3)
-            {
-                Console.WriteLine(k);
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                switch (Console.ReadLine())
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимы цвет красный!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет зелёный!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет бирюзовый");
-                        break;
-
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        Console.WriteLine("Ваш любимый цвет жёлтый!");
-                        break;
-                }
-                k = k++;
-
-            }
+            Console.WriteLine("Итоговая сумма: {0}", sum);
         }
 
 
