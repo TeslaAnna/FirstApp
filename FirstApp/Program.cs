@@ -9,32 +9,61 @@ namespace FirstApp
         {
 
             int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
-            var s = 0;
 
-
-            for (var i = 0; i <= arr.GetUpperBound(0); i++)
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
             {
-
-                for (var k = 0; k <= arr.GetUpperBound(1); k++)
+                for (int k = 0; k <= arr.GetUpperBound(1); k++)
                 {
-                    if (arr[i, k] > 0)
-
-                        s++;
+                    Console.Write(arr[i, k] + " ");
                 }
-                
+                Console.WriteLine();
             }
 
-            Console.WriteLine(s);
-                        
+            Console.WriteLine();
+
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (int k = 0; k <= arr.GetUpperBound(1); k++)
+                {
+
+
+                    for (int l = k + 1; l <= arr.GetUpperBound(1); l++)
+                    {
+
+                        if (arr[i, k] > arr[i, l])
+                        {
+                            int ch = arr[i, k];
+                            arr[i, k] = arr[i, l];
+                            arr[i, l] = ch;
+                        }
+                    }
+                    Console.Write(arr[i, k] + " ");
+                }
+
+                Console.WriteLine();
+             
+            }
+
+            
+
+
+
+
+
 
             Console.ReadKey();
         }
 
-
-
-
-
-
     }
+
 }
+
+
+
+
+
+
+
+
+
 
