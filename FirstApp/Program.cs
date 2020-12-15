@@ -8,47 +8,21 @@ namespace FirstApp
 
         {
 
-            string[] favcolors = new string[3];
+            Console.WriteLine("Введите своё имя");
 
-            for (int i = 0; i < favcolors.Length; i++)
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Ваше имя по буквам: ");
+
+            foreach(var ch in name)
             {
-                Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
-                favcolors[i] = Console.ReadLine();
+                Console.Write(ch + " ");
             }
 
-            foreach (var color in favcolors)
-            {
-                switch (color)
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+            Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
 
-                        Console.WriteLine("Ваш любимы цвет красный!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет зелёный!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет бирюзовый");
-                        break;
-
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        Console.WriteLine("Ваш любимый цвет жёлтый!");
-                        break;
-                }
-            }
+            Console.ReadKey();
         }
 
 
