@@ -8,17 +8,19 @@ namespace FirstApp
 
         {
 
-            int[] array = { 1, 2, -1, 4, -10 };
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             var s = 0;
 
 
-            for (var i = 0; i < array.Length; i++)
+            for (var i = 0; i <= arr.GetUpperBound(0); i++)
             {
-               
 
-                if (array[i] > 0)
-                    
-                    s = s + 1;
+                for (var k = 0; k <= arr.GetUpperBound(1); k++)
+                {
+                    if (arr[i, k] > 0)
+
+                        s++;
+                }
                 
             }
 
