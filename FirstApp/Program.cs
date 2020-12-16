@@ -7,49 +7,21 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
+            (string name, int age) anketa;
 
-            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            Console.WriteLine("Введите ваше имя: ");
+            anketa.name = Console.ReadLine();
 
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-            {
-                for (int k = 0; k <= arr.GetUpperBound(1); k++)
-                {
-                    Console.Write(arr[i, k] + " ");
-                }
-                Console.WriteLine();
-            }
-
-            Console.WriteLine();
-
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-            {
-                for (int k = 0; k <= arr.GetUpperBound(1); k++)
-                {
+            Console.WriteLine("Введите ваш возраст цифрами: ");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
 
 
-                    for (int l = k + 1; l <= arr.GetUpperBound(1); l++)
-                    {
-
-                        if (arr[i, k] > arr[i, l])
-                        {
-                            int ch = arr[i, k];
-                            arr[i, k] = arr[i, l];
-                            arr[i, l] = ch;
-                        }
-                    }
-                    Console.Write(arr[i, k] + " ");
-                }
-
-                Console.WriteLine();
-             
-            }
-
+            Console.WriteLine("Ваше имя: {0}", anketa.Item1);
+            
+            Console.WriteLine("Ваш возраст: {0} ", anketa.Item2);
             
 
-
-
-
-
+            
 
             Console.ReadKey();
         }
