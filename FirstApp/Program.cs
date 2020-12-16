@@ -7,29 +7,48 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            (string Name, string Type, double Age, int NameCount) Pet;
+            (string Name, string LastName, string Login, int LoginLength, bool HavePet, double Age, string[] Color) User;
 
-            
-            Console.WriteLine("Введите имя вашего питомца: ");
-            Pet.Name = Console.ReadLine();
-            Pet.NameCount = Pet.Name.Length;
+            for (int x = 0; x< 3; x++)
+            {
+                Console.WriteLine("Введите имя");
+                User.Name = Console.ReadLine();
 
-            Console.WriteLine("Введите тип вашего питомца: ");
-            Pet.Type = Console.ReadLine();
+                Console.WriteLine("Введите фамилию");
+                User.LastName = Console.ReadLine();
 
-            Console.WriteLine("Введите возраст вашего питомца цифрами: ");
-            Pet.Age = Convert.ToDouble(Console.ReadLine());
-            
+                Console.WriteLine("Введите логин");
+                User.Login = Console.ReadLine();
+                User.LoginLength = User.Login.Length;
+
+                Console.WriteLine("Есть ли у вас животные? Да или Нет");
+                string i = Console.ReadLine();
+
+                if (i == "Да")
+                {
+                    User.HavePet = true;
+                }
+                else
+                {
+                    User.HavePet = false;
+
+                }
+
+                Console.WriteLine("Введите возраст пользователя");
+                User.Age = Convert.ToDouble(Console.ReadLine());
+
+                User.Color = new string[3];
+
+                Console.WriteLine("Введите три любимых цвета пользователя");
+
+                for (int k = 0; k < User.Color.Length; k++)
+                {
+                    User.Color[k] = Console.ReadLine();
+
+                }
 
 
-
-
-            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
-            Console.WriteLine("Тип вашего животного: {0}", Pet.Type);
-            Console.WriteLine("Возраст вашего питомца: {0} ", Pet.Age);
-            Console.WriteLine("Длина имени вашего питомца: {0}", Pet.NameCount);
-            
-
+            }
             
 
             Console.ReadKey();
