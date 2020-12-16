@@ -7,22 +7,27 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            var (name, age) = ("Евгения", "27");
+            (string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.WriteLine("Моё имя: {0}", name);
-            Console.WriteLine("Мой возраст: {0}", age);
-
-
-            Console.Write("Введите ваше имя: ");
-            name = Console.ReadLine();
-
-            Console.Write("Введите ваш возраст цифрами: ");
-            age = Console.ReadLine();
-
-
-            Console.WriteLine("Ваше имя: {0}", name);
             
-            Console.WriteLine("Ваш возраст: {0} ", age);
+            Console.WriteLine("Введите имя вашего питомца: ");
+            Pet.Name = Console.ReadLine();
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.WriteLine("Введите тип вашего питомца: ");
+            Pet.Type = Console.ReadLine();
+
+            Console.WriteLine("Введите возраст вашего питомца цифрами: ");
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            
+
+
+
+
+            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
+            Console.WriteLine("Тип вашего животного: {0}", Pet.Type);
+            Console.WriteLine("Возраст вашего питомца: {0} ", Pet.Age);
+            Console.WriteLine("Длина имени вашего питомца: {0}", Pet.NameCount);
             
 
             
