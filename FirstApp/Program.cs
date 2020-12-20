@@ -44,8 +44,19 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
+            var FavColors = new string[3];
 
-            ShowColor();
+            for (int i = 0; i < FavColors.Length; i++)
+            {
+                FavColors[i] = ShowColor();
+            }
+
+            Console.WriteLine("Ваши любимые цвета:");
+            foreach (var color in FavColors)
+            {
+                Console.WriteLine(color);
+            }
+            
 
             Console.ReadKey();
         }
