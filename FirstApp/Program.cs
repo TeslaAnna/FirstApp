@@ -4,9 +4,9 @@ namespace FirstApp
 {
     class Program
     {
-        static string ShowColors(string username)
+        static string ShowColors(string username, int userage)
         {
-            Console.WriteLine("{0} Напишите свой любимый цвет на английском с маленькой буквы", username);
+            Console.WriteLine("{0}, {1} лет \n Напишите свой любимый цвет на английском с маленькой буквы", username, userage);
             var color = Console.ReadLine();
             switch (color)
             {
@@ -57,7 +57,7 @@ namespace FirstApp
 
             for (int i = 0; i < FavColors.Length; i++)
             {
-                FavColors[i] = ShowColors(name);
+                FavColors[i] = ShowColors(name, age);
             }
 
             Console.WriteLine("Ваши любимые цвета:");
