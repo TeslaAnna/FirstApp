@@ -17,6 +17,21 @@ namespace FirstApp
             return result;
 
         }
+
+        static void ShowArray(int[] array, bool IsSort = false)
+        {
+            var temp = array;
+            if (IsSort)
+            {
+                temp = SortArray(array);
+            }
+
+            foreach(var item in temp)
+            {
+                Console.WriteLine(item);
+            }
+              
+        }
         static int[] SortArray(int[] result)
         {
             
@@ -40,8 +55,8 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            var array = GetArrayFromConsole();
-            var sortedarray = SortArray(array);
+            var array = GetArrayFromConsole(10);
+            ShowArray(array, true);
 
             Console.ReadKey();
         }
