@@ -40,7 +40,8 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            
+            var array = GetArrayFromConsole();
+            var sortedarray = SortArray(array);
 
             Console.ReadKey();
         }
