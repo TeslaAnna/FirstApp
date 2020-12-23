@@ -11,7 +11,7 @@ namespace FirstApp
             var someName = "Евгения";
             Console.WriteLine(someName);
 
-            GetName(someName);
+            GetName(ref someName);
             Console.WriteLine(someName);
 
             var someAge = 34;
@@ -23,7 +23,7 @@ namespace FirstApp
             Console.ReadKey();
         }
         
-        static void GetName(string name)
+        static void GetName(ref string name)
         {
             Console.WriteLine("Введите имя");
             name = Console.ReadLine();
