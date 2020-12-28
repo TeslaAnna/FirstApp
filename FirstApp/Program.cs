@@ -8,32 +8,28 @@ namespace FirstApp
         static void Main(string[] args)
 
         {
-            var someName = "Евгения";
-            Console.WriteLine(someName);
+            Console.WriteLine("Напишите что-то");
 
-            GetName(ref someName);
-            Console.WriteLine(someName);
+            var str = Console.ReadLine();
 
-            var someAge = 34;
-            Console.WriteLine(someAge);
+            Console.WriteLine("Укажите глубину эха");
 
-            ChangeAge(someAge);
-            Console.WriteLine(someAge);
+            var deep = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < deep; i++)
+            {
+                Echo(str);
+            }
 
             Console.ReadKey();
         }
-        
-        static void GetName(ref string name)
+
+        static void Echo(string saidword)
         {
-            Console.WriteLine("Введите имя");
-            name = Console.ReadLine();
+            Console.WriteLine(saidword);
         }
 
-        static void ChangeAge(int age)
-        {
-            Console.WriteLine("Введите возраст");
-            age = Convert.ToInt32(Console.ReadLine());
-        }
+        
 
     }
 
