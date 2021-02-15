@@ -2,44 +2,68 @@
 
 namespace FirstApp
 {
+      class Human
+        {
+            // Поля класса
+            public string name;
+            public int age;
+
+            // Метод класса
+            public void Greetings()
+            {
+                Console.WriteLine("Меня зовут {0}, мне {1}", name, age);
+            }
+
+        // Конструктор 1
+        public Human()
+        {
+            name = "Неизвестно";
+            age = 20;
+        }
+        // Конструктор 2
+        public Human(string n)
+        {
+            name = n;
+            age = 20;
+        }
+        // Конструктор 3
+        public Human(string n, int a)
+        {
+            name = n;
+            age = a;
+        }
+    }
+
+        struct Animal
+        {
+            // Поля структуры
+            public string type;
+            public string name;
+            public int age;
+
+            // Метод структуры
+            public void Info()
+            {
+                Console.WriteLine("Это {0} по кличке {1}, ему {2}", type, name, age);
+            }
+        }
     class Program
     {
-
         static void Main(string[] args)
-
         {
-            Console.WriteLine("Введите число");
+            Human human = new Human();
+            human.Greetings();
 
-            var y = int.Parse(Console.ReadLine());
+            human = new Human("Анна");
+            human.Greetings();
 
-            Console.WriteLine("Введите степень");
-
-            var i = byte.Parse(Console.ReadLine());
-
-            Console.WriteLine(PowerUp(y,i));
+            human = new Human("Анна", 34);
+            human.Greetings();
 
             Console.ReadKey();
         }
 
-        static decimal PowerUp(int N, byte pow)
-        {
-            if (pow == 0)
-            {
-                return 1; 
-            }
-            else
-            {
-                if (pow == 1)
-                {
-                    return N;
-                }
-                else
-                {
-                    return N * PowerUp(N, --pow);
-                }
-                
-            }
-        }
+       
 
 
 
