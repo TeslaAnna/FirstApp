@@ -2,64 +2,51 @@
 
 namespace FirstApp
 {
-      class Human
-        {
-            // Поля класса
-            public string name;
-            public int age;
+	class Circle
+	{
+		public double radius;
 
-            // Метод класса
-            public void Greetings()
-            {
-                Console.WriteLine("Меня зовут {0}, мне {1}", name, age);
-            }
+		public double Square()
+		{
+		}
 
-        // Конструктор 1
-        public Human()
-        {
-            name = "Неизвестно";
-            age = 20;
-        }
-        // Конструктор 2
-        public Human(string n)
-        {
-            name = n;
-            age = 20;
-        }
-        // Конструктор 3
-        public Human(string n, int a)
-        {
-            name = n;
-            age = a;
-        }
-    }
+		public double Length()
+		{
+		}
+	}
 
-        struct Animal
-        {
-            // Поля структуры
-            public string type;
-            public string name;
-            public int age;
+	class Triangle
+	{
+		public int a;
+		public int b;
+		public int c;
 
-            // Метод структуры
-            public void Info()
-            {
-                Console.WriteLine("Это {0} по кличке {1}, ему {2}", type, name, age);
-            }
-        }
-    class Program
+		public double Square()
+		{
+		}
+
+		public double Perimeter()
+		{
+		}
+	}
+
+	class Square
+	{
+		public int side;
+
+		public double Square()
+		{
+		}
+
+		public double Perimeter()
+		{
+		}
+	}
+	class Program
     {
         static void Main(string[] args)
         {
-            Human human = new Human();
-            human.Greetings();
-
-            human = new Human("Анна");
-            human.Greetings();
-
-            human = new Human("Анна", 34);
-            human.Greetings();
-
+           
             Console.ReadKey();
         }
 
